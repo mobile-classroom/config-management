@@ -9,5 +9,5 @@ yum -y install chef-server-core
 
 # Install the chef management console
 chef-server-ctl install chef-manage
-chef-server-ctl reconfigure
 chef-manage-ctl reconfigure
+chef-server-ctl reconfigure

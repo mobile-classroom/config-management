@@ -1,0 +1,30 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Define some port forwardings
+Classroom::ConfigManagement::ports {
+  # guetsPort => hostPort
+  443 => 50443
+}
+
+# Define the Chef Server's URL
+Classroom::ConfigManagement::url = "https://localhost:50443"
+
+# Configure the initial Chef admin user
+#
+# See also https://docs.chef.io/server_users.html#user-create
+#
+Classroom::ConfigManagement::Admin::firstname = "John"
+Classroom::ConfigManagement::Admin::lastname = "Doe"
+Classroom::ConfigManagement::Admin::email = "john.doe@example.org"
+Classroom::ConfigManagement::Admin::username = "john"
+Classroom::ConfigManagement::Admin::password = "sup3rs3cur3"
+
+# Configure the initial Chef organization
+#
+# See also https://docs.chef.io/server_users.html#org-create
+#
+Classroom::ConfigManagement::Organization::shortName = "doe-education"
+Classroom::ConfigManagement::Organization::longName = "Doe Education Ltd."
+
+Classroom::ConfigManagement::Box::ipAddress = "192.168.20.10"
